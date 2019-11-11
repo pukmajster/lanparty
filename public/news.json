@@ -1,0 +1,20 @@
+{
+    "posts": [
+        {
+            "id": 0,
+            "tags": [],
+            "date": "10. 11. 2019",
+            "title": "Nove igre",
+            "link": "",
+            "body": "<p>Dodali smo še Minecraft ter CoD: Mobile na seznam iger</p>"
+        },
+        {
+            "id": 0,
+            "tags": [],
+            "date": "03. 10. 2019",
+            "title": "Prijave so odprte!",
+            "link": "",
+            "body": "<p>Prijave za ERŠ Lan Party 2020 so zdaj odprte!</p>"
+        }
+    ]
+}
