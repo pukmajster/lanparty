@@ -1,11 +1,11 @@
 // --------------------------------------------------------------------
 //
-// Templator is a handy lightweight JS tool that renders static templates within the DOM.
+// Templator is a handy lightweight JS utility that renders static templates within the DOM.
 // Its main purpose is to reduce the amount of repeated html.
 //
 // --------------------------------------------------------------------
 // 
-// Current version: 0.0.5 (13.10.2019)
+// Current version: 0.0.6 (11.11.2019)
 // Initial version: 0.0.1 (12.09.2019)
 // Author: Žan Pukmajster (https://pukmajster.github.io)
 //
@@ -28,15 +28,18 @@
 // 
 // --------------------------------------------------------------------
 // 
-// PATCH NOTES
+// TO-DO:
+// - Inheritable attributes
 //
 // --------------------------------------------------------------------
+//
+// PATCH NOTES:
 //
 // v0.0.6 (11.11.2019):
 // - Added a shorthand function for Templator.New() called T()
 // - Removed unnecessary console logs.
 //
-// v0.0.5:
+// v0.0.5 (13.10.2019):
 // - Fixed a collision bug with the class template attributes.
 // - The class shortand now appends the given classes to the already existing ones.
 // - Template attributes will no longer cause crashes if only a prefix was given
@@ -61,7 +64,7 @@
 //     - Adds the name of the template as a class to the element
 // - Templator now sets {display: none} for all elements that are named after a template.
 //
-// v0.0.1:
+// v0.0.1 (12.09.2019):
 // - Added Templator template attributes
 // 
 // --------------------------------------------------------------------
@@ -72,11 +75,16 @@ const Templator = new class {
     constructor() {
         this.debug = true;
         this.definedTemplates = [];
+
+        // General configuration
         this.cfg = {
             disableTemplatorAttributes: false,
             hideElementsNamedAfterTemplates: true,
-            removeTemplatorStyleTagAfterDomLoad: true
+            removeTemplatorStyleTagAfterDomLoad: true,
+            makeTemplatorElementCss: true
         };
+
+        // Syntaxing configuration
         this.syntax = {
             attributes: {
                 class: '.',
@@ -96,6 +104,18 @@ const Templator = new class {
         styleBlock.id = "TemplatorStyle";
         let head = document.getElementsByTagName('head')[0];
         if(head){head.appendChild(styleBlock)};
+
+        // // Create a style block for Templator
+        // styleBlock = document.createElement('style');
+        // styleBlock.id = "TemplatorElementsCss";
+        // styleBlock.innerHTML = `
+        //     t-display {
+        //         display: none;
+        //     }
+
+        //     t-display {}
+        // `
+        // if(head){head.appendChild(styleBlock)};
     }
     
     // Debug logging
@@ -328,7 +348,7 @@ function T(name, render, ...options) {
     // Make sure we have the required arguments
     if(!( name && render )) return;
 
-    // Define a new template!
+    // Define a new template
     Templator.New({
         name: name,
         render: render,
