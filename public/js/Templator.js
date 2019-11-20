@@ -1,73 +1,78 @@
-// --------------------------------------------------------------------
-//
-// Templator is a handy lightweight JS utility that renders static templates within the DOM.
-// Its main purpose is to reduce the amount of repeated html.
-//
-// --------------------------------------------------------------------
-// 
-// Current version: 0.0.6 (11.11.2019)
-// Initial version: 0.0.1 (12.09.2019)
-// Author: Žan Pukmajster (https://pukmajster.github.io)
-//
-// --------------------------------------------------------------------
-//
-// EXAMPLE:
-// 
-// HTML: <redText text="Hi!" />
-// 
-// JS: Templator.New({
-//          name: 'redText',
-//          observe: 'body',
-//          render: (props) => { 
-//              return (html`
-//                  <p style="color: red"> ${props.text} </p>
-//          `)}
-//      })
-//
-// OUTCOME: <p style="color: red">Hi!</p>
-// 
-// --------------------------------------------------------------------
-// 
-// TO-DO:
-// - Inheritable attributes
-//
-// --------------------------------------------------------------------
-//
-// PATCH NOTES:
-//
-// v0.0.6 (11.11.2019):
-// - Added a shorthand function for Templator.New() called T()
-// - Removed unnecessary console logs.
-//
-// v0.0.5 (13.10.2019):
-// - Fixed a collision bug with the class template attributes.
-// - The class shortand now appends the given classes to the already existing ones.
-// - Template attributes will no longer cause crashes if only a prefix was given
-//
-// v0.0.4:
-// - Added new template attributes:
-//    - INHERIT_ATTRIBUTES (  <element INHERIT_ATTRIBUTES />  )
-//      - Adds all inheritable attributes of the template root to the element
-//    - INHERIT: INHERIT_NAME + INHERIT_ATTRIBUTES
-// - Fixed the class shorthand template attribute. It now also has its own keyword.
-// 
-// v0.0.3:
-// - Added the "dot" template attribute as a shorthand for the "class" attribute.
-//
-// v0.0.2:
-// - Added new template attributes:
-//   - Necessary (  <element !attr="${props.value}" />  )
-//     - The attribute tag is added to the element, even if the attribute value is empty
-//   - Unecessary (  <element ?attr="${props.value}" />  )
-//     - The attribute tag is only added to the element if it has a non-empty value
-//   - INHERIT_NAME (  <element INHERIT_NAME />  )
-//     - Adds the name of the template as a class to the element
-// - Templator now sets {display: none} for all elements that are named after a template.
-//
-// v0.0.1 (12.09.2019):
-// - Added Templator template attributes
-// 
-// --------------------------------------------------------------------
+/* --------------------------------------------------------------------
+ *
+ * Templator is a handy lightweight JS utility that renders static templates within the DOM.
+ * Its main purpose is to reduce the amount of repeated html.
+ *
+ * --------------------------------------------------------------------
+ * 
+ * Current version: 0.0.7 (14.11.2019)
+ * Initial version: 0.0.1 (12.09.2019)
+ * Author: Žan Pukmajster (https://pukmajster.github.io)
+ *
+ * --------------------------------------------------------------------
+ *
+ * EXAMPLE:
+ * 
+ * HTML: <redText text="Hi!" />
+ * 
+ * JS: Templator.New({
+ *          name: 'redText',
+ *          observe: 'body',
+ *          render: (props) => { 
+ *              return (html`
+ *                  <p style="color: red"> ${props.text} </p>
+ *          `)}
+ *      })
+ *
+ * OUTCOME: <p style="color: red">Hi!</p>
+ * 
+ * --------------------------------------------------------------------
+ * 
+ * TO-DO:
+ *
+ * --------------------------------------------------------------------
+ *
+ * PATCH NOTES:
+ *
+ * v0.0.7 (14.11.2019):
+ * - render() props now hold a special object called '$meta', which holds
+ *   templator meta deta for the unique template render.
+ *   - The unique template ID and GUID can be used to identify rendered elements.
+ * - Added extra comments for documentation's sake.
+ *
+ * v0.0.6 (11.11.2019):
+ * - Added a shorthand function for Templator.New() called T().
+ * - Removed unnecessary console logs.
+ *
+ * v0.0.5 (13.10.2019):
+ * - Fixed a collision bug with the class template attributes.
+ * - The class shortand now appends the given classes to the already existing ones.
+ * - Template attributes will no longer cause crashes if only a prefix was given.
+ *
+ * v0.0.4:
+ * - Added new template attributes:
+ *    - INHERIT_ATTRIBUTES (  <element INHERIT_ATTRIBUTES />  )
+ *      - Adds all inheritable attributes of the template root to the element.
+ *    - INHERIT: INHERIT_NAME + INHERIT_ATTRIBUTES
+ * - Fixed the class shorthand template attribute. It now also has its own keyword.
+ * 
+ * v0.0.3:
+ * - Added the "dot" template attribute as a shorthand for the "class" attribute.
+ *
+ * v0.0.2:
+ * - Added new template attributes:
+ *   - Necessary (  <element !attr="${props.value}" />  )
+ *     - The attribute tag is added to the element, even if the attribute value is empty.
+ *   - Unecessary (  <element ?attr="${props.value}" />  )
+ *     - The attribute tag is only added to the element if it has a non-empty value.
+ *   - INHERIT_NAME (  <element INHERIT_NAME />  )
+ *     - Adds the name of the template as a class to the element.
+ * - Templator now sets {display: none} for all elements that are named after a template.
+ *
+ * v0.0.1 (12.09.2019):
+ * - Added Templator template attributes.
+ *
+ * -------------------------------------------------------------------- */
 
 const Templator = new class {
 
@@ -75,6 +80,7 @@ const Templator = new class {
     constructor() {
         this.debug = true;
         this.definedTemplates = [];
+        this.idTracker = -1;
 
         // General configuration
         this.cfg = {
@@ -87,15 +93,15 @@ const Templator = new class {
         // Syntaxing configuration
         this.syntax = {
             attributes: {
-                class: '.',
-                classShorthand: 'c',
-                style: '#',
-                necessary: '!',
-                unnecessary: '?',
-                inheritName: 'inherit_name',
-                inheritAttributes: 'inherit_attributes',
-                inherit: 'inherit',
-                inheritableAttribute: ':'
+                class: '.', 	                            // Bind one specific class
+                classShorthand: 'c',                        // Shorthand for the "class" attribute
+                style: '#',                                 // Specify a style property
+                necessary: '!',                             // Bind an attribute, even if no value has been given
+                unnecessary: '?',                           // Bind an attribute, but only if the given value isn't null
+                inheritName: 'inherit_name',                // Inherit the root name
+                inheritAttributes: 'inherit_attributes',    // Inherit root attributes
+                inherit: 'inherit',                         // Inherit the template name and root attributes
+                inheritableAttribute: ':'                   // Marks an attribute for inheritance
             }
         };
 
@@ -209,6 +215,12 @@ const Templator = new class {
             // In this case, the props.children is preserved;
             rootProps.children = item.innerHTML;
 
+            // Add Templator metadata to props
+            rootProps.$meta = {
+                id: ++this.idTracker,
+                guid: ''
+            }
+
             // Gather all inheritable attributes/props.
             let inheritableRootProps = [];
             let prefix = this.syntax.attributes.inheritableAttribute;
@@ -244,11 +256,10 @@ const Templator = new class {
                         cleanAttrName = '';
                         isTemplatorAttribute = true;
 
-                        // console.log(attrName)
                         // Determine the attribute type
 						if(attrName === pre.classShorthand) {
                             // The class shorthand
-                            // This will also keep all of the previously assigned classes.
+                            // This will also keep all of the previously assigned classes
                             elem.className += ' ' + attrValue;
 						}
                         else if(attrName.startsWith(pre.class) && attrName.length > 1) {
@@ -317,10 +328,8 @@ const Templator = new class {
     }
 }
 
-// html() is a template literal tag. It returns the given string.
+// html() is a template literal tag. It simply returns the given string.
 // You can use it alongside 'lit-html' for html syntaxing in .js files.
-//
-// Example of usage: html`<div>${props.children}</div>`
 const html = (strings, ...values) => {
     let str = '';
     strings.forEach((string, i) => {
@@ -328,6 +337,8 @@ const html = (strings, ...values) => {
     });
     return str;
 }
+
+let example = html`<div>${'hi'}</div>`;
 
 // This renders all the templates once the DOM is first loaded.
 Templator.OnDomLoad(() => {
@@ -343,7 +354,7 @@ Templator.OnDomLoad(() => {
 })
 
 // A shorthand for defining Templator templates
-function T(name, render, ...options) {
+const T = (name, render, ...options) => {
 
     // Make sure we have the required arguments
     if(!( name && render )) return;

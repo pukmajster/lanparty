@@ -33,35 +33,57 @@
                 gameshort="CS:GO"
                 frame="https://i.ytimg.com/vi/ZfCOnCxJUVw/maxresdefault.jpg"
             >
-                <lpTeam teamname="Ekipa 1"></lpTeam>
-                <lpTeam teamname="Ekipa 2"></lpTeam>
-                <lpTeam teamname="Ekipa 3"></lpTeam>
-                <lpTeam teamname="Ekipa 4"></lpTeam>
+                {% for team in teams.csgo %}
+                    <lpTeam teamname="{{ team.team | safe }}">
+                        {% for player in team.players %}
+                            <div>{{ player }}</div>
+                        {% endfor %}    
+                    </lpTeam>
+                {% endfor %}
             </lpTeamsContainer>
             <lpTeamsContainer
                 game="League of Legends"
                 frame="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/it_IT/b49c208c106c3566ac66bc70dc62993c84c0511e/assets/assets/images/gi-landing-top.jpg"
             >
-                <lpTeam teamname="Esfsefsefs"></lpTeam>
-                <lpTeam teamname="esfawdas 2"></lpTeam>
-                <lpTeam teamname="ffffffffffffff"></lpTeam>
-                <lpTeam teamname="yesefsefef ef"></lpTeam>
+                {% for team in teams.lol %}
+                    <lpTeam teamname="{{ team.team | safe }}">
+                        
+                        {% for player in team.players %}
+                            <div>{{ player }}</div>
+                        {% endfor %}
+                        
+                    </lpTeam>
+                {% endfor %}
             </lpTeamsContainer>
 
         </div>
-        <div class="teamsContainer">
+        <div class="teamsContainer"> <!-- FIFA 20 and Rocket Leauge -->
             
-            </lpTeamsContainer>
+            <!-- </lpTeamsContainer> -->
 
                 <lpTeamsContainer
                     game="FIFA 20"
                     frame="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSThoeBjTPIgMdhwN4LjB5wU6SJtEuvXKnQE3FCBo8jiIMaN5jD"
                 >
+                    <lpPlayers teamname="Igralci">
+                            
+                        {% for player in soloPlayers.fifa %}
+                            <div>{{ player }}</div>
+                        {% endfor %}
+                    </lpPlayers>
+                <!-- </lpTeam> -->
                 </lpTeamsContainer>
+
+
                 <lpTeamsContainer
                     game="Rocket League"
                     frame="http://3.bp.blogspot.com/-XonRJJIV6sQ/VhKVwtOErfI/AAAAAAAABgg/g4_db5ZKnBY/s400/rl.png"
                 >
+                    <lpPlayers teamname="Igralci">         
+                        {% for player in soloPlayers.rl %}
+                            <div>{{ player }}</div>
+                        {% endfor %}
+                    </lpPlayers>
                 </lpTeamsContainer>
             <!-- <lpTeamsContainer
                     game="Minecraft"
@@ -73,8 +95,11 @@
                     frame="https://s3.dexerto.com/thumbnails/_thumbnailLarge/best-weapons-call-of-duty-mobile-cod-mobile.jpg"
                 > -->
 
-            </lpTeamsContainer>
+            <!-- </lpTeamsContainer> -->
+
         </div>
+
+        <div style="text-align: center;">Stran nazadnje posodobljena {{ lastChange }}</div>
     </div>
 </div>
 

@@ -1,16 +1,152 @@
 {
+	"lastChange": "20. 11. 2019, 11:10",
     "teams": {
         "csgo": [
-            
+            {
+                "team": "HyperSpeed",
+                "players": [
+                    "Tigeros",
+                    "N1xiq",
+                    "Major Filo",
+                    "S1mp|3^oN",
+                    "Horus"
+                ]
+            },
+            {
+                "team": "Vac-Shot",
+                "players": [
+                    "KrejcxD 2.0",
+                    "Tousty69",
+                    "Smonki",
+                    "Anime3k",
+                    "šurda glumac"
+                ]
+            },
+            {
+                "team": "ThE C3LL",
+                "players": [
+                    "ŠIPTAR",
+                    "Lgius",
+                    "The Vacuole",
+                    "Danaj",
+                    "Mitochondria"
+                ]
+            },
+            {
+                "team": "Smučarji aškamislim",
+                "players": [
+                    "xxpremogovnikvelenjexx",
+                    "Gemišt",
+                    "bajsmaister",
+                    "Beksler",
+                    "vela"
+                ]
+            },
+            {
+                "team": "Sedem",
+                "players": [
+                    "XO",
+                    "big drip",
+                    "Swiper...",
+                    "ok",
+                    "Gabi"
+                ]
+            },
+            {
+                "team": "Dihur",
+                "players": [
+                    "✪C4D1ƐN",
+                    "Pr4s3c",
+                    "s3nc",
+                    "AgentM",
+                    "Mičar"
+                ]
+            }
         ],
         "lol": [
+            {
+                "team": "Demonkoš",
+                "players": [
+                    "M A C E K",
+                    "MAX Macek",
+                    "Saj0",
+                    "Eyedee",
+                    "Hudi"
+                ]
+            },
+            {
+                "team": "ŠTUK",
+                "players": [
+                    "Jaka",
+                    "Alen",
+                    "Rok",
+                    "David",
+                    "-- Unknown --"
+                ]
+            },
+            {
+                "team": "Suhe Slive", 
+                "players": [
+                    "LeHamburger109",
+                    "Nyxthenyx",
+                    "0rang3",
+                    "micicad123",
+                    "g3ppy"
+                ]
+            },
+            {
+                "team": "Prijatelji", 
+                "players": [
+                    "AnitaPee",
+                    "ReformedPunki",
+                    "Gluk4",
+                    "Bider003",
+                    "xXDanajXx"
+                ]
+            },
+            {
+                "team": "Tanky", 
+                "players": [
+                    "Stram3c",
+                    "Bali8",
+                    "Kidimen",
+                    "Nesi4ever",
+                    "Aüby"
+                ]
+            },
+            {
+                "team": "Nine-Nine",
+                "players": [
+                    "cverlee",
+                    "willy161",
+                    "Nik Gajšek",
+                    "Tim Dolar",
+                    "Gašper Juhart"
+                ]
+            }
+        ]
+    },
 
-        ],
-        "rl": [
-
-        ],
+    "soloPlayers": {
         "fifa": [
-            
-        ] 
+            "A. Muminović",
+            "T. Ticevic",
+            "A. Martinovic",
+            "A. Rogić",
+            "T. Rednjak",
+            "D. oblak",
+            "S. Hasanić",
+            "A. Kolar",
+            "L. Kotnik",
+            "A. Pantner"
+        ], 
+        "rl": [
+            "D. Škulj",
+            "D. Petek",
+            "A. Muminović",
+            "M. Jecl",
+            "D. Arist", 
+            "J. Petkovič"
+        ]
     }
 }

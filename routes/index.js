@@ -6,7 +6,7 @@ const fs = require('fs');
 const router = express.Router();
 
 // Home
-router.get('/', (req, res, next) => {
+router.get('/home', (req, res, next) => {
     res.render('home.njk', JSON.parse(fs.readFileSync('./public/news.json', 'utf-8')));
     // res.send('yeet');
 });
@@ -18,8 +18,14 @@ router.get('/stream', (req, res, next) => {
 
 // Ekipe
 router.get('/ekipe', (req, res, next) => {
-    res.render('teams.njk');
+    res.render('teams.njk', JSON.parse(fs.readFileSync('./public/teams.json', 'utf-8')));
 });
+
+// FAQ
+router.get('/faq', (req, res, next) => {
+    res.render('faq.njk');
+});
+
 
 // Spored
 router.get('/spored', (req, res, next) => {
