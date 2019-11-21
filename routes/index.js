@@ -6,35 +6,34 @@ const fs = require('fs');
 const router = express.Router();
 
 // Home
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
     res.render('home.njk', JSON.parse(fs.readFileSync('./public/news.json', 'utf-8')));
     // res.send('yeet');
 });
 
 // Stream
-router.get('/stream', (req, res, next) => {
+router.get('/stream', (req, res) => {
     res.render('stream.njk');
 });
 
 // Ekipe
-router.get('/ekipe', (req, res, next) => {
+router.get('/ekipe', (req, res) => {
     res.render('teams.njk', JSON.parse(fs.readFileSync('./public/teams.json', 'utf-8')));
 });
 
 // FAQ
-router.get('/faq', (req, res, next) => {
+router.get('/faq', (req, res) => {
     res.render('faq.njk');
 });
 
-
 // Spored
-router.get('/spored', (req, res, next) => {
+router.get('/spored', (req, res) => {
     res.render('coming-soon.njk');
 });
 
 // Test route
 router.get('/hi', (req, res) => {
-    res.send( 'hi' );
+    res.status(200).send('hi');
 })
 
 // Sends all posts

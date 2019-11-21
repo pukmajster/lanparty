@@ -1,5 +1,5 @@
-// Templator je en moj majhen framework kateri omogoča povno-uporabo statičnih templejtov.
-// Moje sožalje, če boš moral razumeti to datoteko.
+// Templator je en moj majhen framework kateri omogoča ponovno-uporabo statičnih templejtov.
+// Moje sožalje, če boš moral razumeti to kodo.
 
 const lp = {
     allowOnlySingleExtendedTeamPanel: false
