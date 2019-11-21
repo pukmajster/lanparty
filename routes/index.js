@@ -6,7 +6,7 @@ const fs = require('fs');
 const router = express.Router();
 
 // Home
-router.get('/home', (req, res, next) => {
+router.get('/', (req, res, next) => {
     res.render('home.njk', JSON.parse(fs.readFileSync('./public/news.json', 'utf-8')));
     // res.send('yeet');
 });
