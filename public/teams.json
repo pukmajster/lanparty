@@ -1,5 +1,5 @@
 {
-	"lastChange": "20. 11. 2019, 11:10",
+	"lastChange": "22. 11. 2019, 17:12",
     "teams": {
         "csgo": [
             {
@@ -60,6 +60,26 @@
                     "s3nc",
                     "AgentM",
                     "Mičar"
+                ]
+            },
+            {
+                "team": "Ekipa EZ4ENCE",
+                "players": [
+                    "Timcheyy33",
+                    "John_Wick",
+                    "GodsTodd™",
+                    "Nomis",
+                    "Minecraft_Pro"
+                ]
+            },
+            {
+                "team": "Global_en_dan",
+                "players": [
+                    "Niko302",
+                    "Imagine being a LATVIAN DOG",
+                    "GeneralSand",
+                    "Micro",
+                    "Rudolf___"
                 ]
             }
         ],
@@ -146,7 +166,8 @@
             "A. Muminović",
             "M. Jecl",
             "D. Arist", 
-            "J. Petkovič"
+            "J. Petkovič",
+            "A. Trbežnik"
         ]
     }
 }
