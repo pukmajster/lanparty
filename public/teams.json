@@ -1,5 +1,5 @@
 {
-	"lastChange": "22. 11. 2019, 17:12",
+	"lastChange": "25. 11. 2019, 18:10",
     "teams": {
         "csgo": [
             {
@@ -81,6 +81,16 @@
                     "Micro",
                     "Rudolf___"
                 ]
+            },
+            {
+                "team": "4g",
+                "players": [
+                    "Twinkiiee",
+                    "Mking",
+                    "Acridim",
+                    "Jkxy",
+                    "Extreme"
+                ]
             }
         ],
         "lol": [
@@ -158,7 +168,9 @@
             "S. Hasanić",
             "A. Kolar",
             "L. Kotnik",
-            "A. Pantner"
+            "A. Pantner",
+            "M. Borovnik",
+            "L. Podhovnik"
         ], 
         "rl": [
             "D. Škulj",
