@@ -1,5 +1,5 @@
 {
-	"lastChange": "25. 11. 2019, 18:10",
+	"lastChange": "28. 11. 2019, 16:40",
     "teams": {
         "csgo": [
             {
@@ -95,11 +95,21 @@
             {
                 "team": "Kool Kids Klub",
                 "players": [
-                    "Niko Ružič",
-                    "Tilen Krivec",
-                    "Jernej Zajc",
-                    "Ivo Videmšek",
+                    "Sid",
+                    "Pegasus",
+                    "Johnny walk",
+                    "DossTk",
                     "Klemen Jakop"
+                ]
+            },
+            {
+                "team": "Cirilica",
+                "players": [
+                    "GLucky",
+                    "willy161",
+                    "Cverly",
+                    "Lil_Putin",
+                    "Katzusha_"
                 ]
             }
         ],
@@ -130,7 +140,7 @@
                     "LeHamburger109",
                     "Nyxthenyx",
                     "0rang3",
-                    "micicad123",
+                    "micicat123",
                     "g3ppy"
                 ]
             },
@@ -158,10 +168,10 @@
                 "team": "Nine-Nine",
                 "players": [
                     "cverlee",
-                    "willy161",
-                    "Nik Gajšek",
-                    "Tim Dolar",
-                    "Gašper Juhart"
+                    "topwillne",
+                    "Random Access",
+                    "dolars1235",
+                    "CookiePacker"
                 ]
             }
         ]
@@ -180,7 +190,8 @@
             "L. Kotnik",
             "A. Pantner",
             "M. Borovnik",
-            "L. Podhovnik"
+            "L. Podhovnik",
+            "A. Cokan"
         ], 
         "rl": [
             "D. Škulj",

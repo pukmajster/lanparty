@@ -289,12 +289,6 @@ Templator.New({
                     ></div>`.repeat(4)}
                     <div #padding="0.7em 1em" #position="relative" #font-size="25px" #text-align="center" >
                         <span class="__title_long" #user-select="none" #padding="0.3em 0.5em" #background="rgba(0,0,0,.5)" #color="white">${props.game}</span>
-                        <!-- <span  class="__title_long"  #user-select="none" #background="rgba(0,0,0,.5)" #color="white"><span #box-sizing="border-box" #padding="0.3em 0.5em" >${props.game}</span></span> -->
-                        <!-- <div #text-align="center" #display="inline-block" #background="rgba(0,0,0,.5)" >  -->
-                            <!-- <span   class="__title_long"  #padding="0.3em 0.5em" #user-select="none"  #color="white">${props.game}</span> -->
-                            <!-- <span  class="__title_short" #user-select="none" #padding="0.3em 0.5em" #background="rgba(0,0,0,.5)" #color="white">${props.gameshort}</span> -->
-                        <!-- <span #position="relative" #float="right" #margin-right="0" #padding="0.3em 0.5em" #background="rgba(0,0,0,.5)" #color="white">2/16</span> -->
-                    <!-- </div> -->
                 </div>
             </div>
   
@@ -348,10 +342,6 @@ T('lpTeam', ({teamname, $meta, children, ...rest}) => {
 
         <div class="lpTeamInfoPanel" #overflow="hidden">
             <div #position="static" #padding="8px 0 8px 18px">
-
-                <!-- Player list goes here -->
-                <!-- ${html`<p>PLAYER</p>`.repeat(5)} -->
-
                 ${children}
             </div>
         </div>
@@ -363,10 +353,6 @@ T('lpPlayers', ({teamname, $meta, children, ...rest}) => {
     return html`
         <div  INHERIT #overflow="hidden">
             <div #position="static" #padding="8px 0 8px 18px">
-
-                <!-- Player list goes here -->
-                <!-- ${html`<p>PLAYER</p>`.repeat(5)} -->
-
                 ${children}
             </div>
         </div>
@@ -420,13 +406,17 @@ T('faq', ({q, a}) => html`
 `)
 
 T('faqContainer', ({children}) => html`
-<div #display="flex" #justify-content="center" #margin-bottom="2em">
-    <div #max-width="800px">
-        <lpCornerBox #background-color="red">
-            <div #display="flex" #justify-content="center"><div  #width="100%"  #margin-top="2em">${children}</div></div>
-        </lpCornerBox>
+    <div #display="flex" #justify-content="center" #margin-bottom="2em">
+        <div #max-width="800px">
+            <lpCornerBox #background-color="red">
+                <div #display="flex" #justify-content="center"><div  #width="100%"  #margin-top="2em">${children}</div></div>
+            </lpCornerBox>
+        </div>
     </div>
-</div>
+`)
+
+T('lpSponsor', ({children: name, image, url}) => html`
+    <a href="${url}" target="blank"><img alt="${name}" src="${image}" /></a> 
 `)
 
 Templator.RenderInDomAll();

@@ -177,7 +177,6 @@ const Templator = new class {
             let templatorStyleBlock = document.querySelector('#TemplatorStyle');
             if(templatorStyleBlock) {
                 templatorStyleBlock.innerHTML += ` ${templateData.name}, .${templateData.name} { display: none; }`;
-                // templatorStyleBlock.innerHTML += ` .${templateData.name} { display: none; }`;
             }
         }
     }
