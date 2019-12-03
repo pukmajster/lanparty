@@ -1,7 +1,15 @@
 {
     "posts": [
         {
-            "id": 0,
+            "id": 2,
+            "tags": [],
+            "date": "03. 12. 2019",
+            "title": "Urnik",
+            "link": "",
+            "body": "<p>Urnik za MAIN EVENT je sledeč:</p><br/><p>17.1.2020 (~ 17:00) - Counter-Strike: Global Offensive</p><p>18.1.2020 (~ 9:00) - League Of Legends</p><br/><p>Za vse ostale igre se bodo urniki uskladili preko socialnih omrežji.</p>"
+        },
+        {
+            "id": 1,
             "tags": [],
             "date": "10. 11. 2019",
             "title": "Nove igre",
