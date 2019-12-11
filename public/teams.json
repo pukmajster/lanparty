@@ -1,5 +1,5 @@
 {
-	"lastChange": "03. 12. 2019, 11:53",
+	"lastChange": "11. 12. 2019, 21:08",
     "teams": {
         "csgo": [
             {
@@ -129,7 +129,7 @@
                     "KryfixzZz",
                     "Prekleti Danijel",
                     "1NF1NITY",
-                    "-- Unknown --"
+                    "USSR_UNKNOWN"
                 ]
             }
         ],
@@ -213,6 +213,16 @@
                     "|| Katakuri ||",
                     "BadCall235"
                 ]
+            },
+            {
+                "team": "QZLE",
+                "players": [
+                    "Mamberino",
+                    "Lenart Golob",
+                    "Anej Krajnc",
+                    "Jan Konečnik",
+                    "Kristjan Herodež"
+                ]
             }
         ]
     },
@@ -231,7 +241,11 @@
             "A. Pantner",
             "M. Borovnik",
             "L. Podhovnik",
-            "A. Cokan"
+            "A. Cokan",
+            "M. Savev",
+            "T. Jevšenak",
+            "A. Prosenjak",
+            "A. Plazl"
         ], 
         "rl": [
             "D. Škulj",
