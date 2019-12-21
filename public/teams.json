@@ -1,5 +1,5 @@
 {
-	"lastChange": "11. 12. 2019, 21:08",
+	"lastChange": "21. 12. 2019, 14:26",
     "teams": {
         "csgo": [
             {
@@ -223,6 +223,16 @@
                     "Jan Konečnik",
                     "Kristjan Herodež"
                 ]
+            },
+            {
+                "team": "Papa Squad v2",
+                "players": [
+                    "GrumpyCat v2",
+                    "Nacho Tuesday",
+                    "Papa Jure",
+                    "Papa Jumbo",
+                    "Papa Grally"
+                ]
             }
         ]
     },
@@ -245,7 +255,8 @@
             "M. Savev",
             "T. Jevšenak",
             "A. Prosenjak",
-            "A. Plazl"
+            "A. Plazl",
+            "N. Šlehta"
         ], 
         "rl": [
             "D. Škulj",
