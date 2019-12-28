@@ -1,5 +1,5 @@
 {
-	"lastChange": "21. 12. 2019, 14:26",
+	"lastChange": "27. 12. 2019, 17:39",
     "teams": {
         "csgo": [
             {
@@ -151,7 +151,7 @@
                     "Alen",
                     "Rok",
                     "David",
-                    "-- Unknown --"
+                    "Brko"
                 ]
             },
             {
@@ -172,26 +172,6 @@
                     "Gluk4",
                     "Bider003",
                     "xXDanajXx"
-                ]
-            },
-            {
-                "team": "Tanky", 
-                "players": [
-                    "Stram3c",
-                    "Bali8",
-                    "Kidimen",
-                    "Nesi4ever",
-                    "Aüby"
-                ]
-            },
-            {
-                "team": "Nine-Nine",
-                "players": [
-                    "cverlee",
-                    "topwillne",
-                    "Random Access",
-                    "dolars1235",
-                    "CookiePacker"
                 ]
             },
             {
@@ -252,6 +232,26 @@
                     "Driky3",
                     "hcujsusie",
                     "namikaismyangel"
+                ]
+            }, 
+            {
+                "team": "Ninja Želve",
+                "players": [
+                    "LordMadMan",
+                    "BlackDamb",
+                    "amel777",
+                    "StRam3c",
+                    "Aüby"
+                ]
+            },
+            {
+                "team": "the cucarachas",
+                "players": [
+                    "potato carl",
+                    "LegendEloc",
+                    "Remount me daddy", 
+                    "Avocado bob",
+                    "Magical pony 21"
                 ]
             }
         ]
