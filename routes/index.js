@@ -27,9 +27,9 @@ router.get('/faq', (req, res) => {
 });
 
 // Spored
-router.get('/spored', (req, res) => {
-    res.render('coming-soon.njk');
-});
+// router.get('/spored', (req, res) => {
+//     res.render('spored.njk');
+// });
 
 // Test route
 router.get('/hi', (req, res) => {

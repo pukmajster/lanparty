@@ -1,6 +1,14 @@
 {
     "posts": [
         {
+            "id": 4,
+            "tags": [],
+            "date": "31. 12. 2019",
+            "title": "Prijave... že spet!",
+            "link": "",
+            "body": "<p>Prijave so se ponovno odprle do 13. 1. 2020.</p>"
+        },
+        {
             "id": 3,
             "tags": [],
             "date": "11. 12. 2019",
