@@ -1,5 +1,5 @@
 {
-	"lastChange": "31. 12. 2019, 16:16",
+	"lastChange": "06. 01. 2020, 13:11",
     "teams": {
         "csgo": [
             {
@@ -151,6 +151,16 @@
                     "fat kid",
                     "JemRit666"
                 ]
+            },
+            {
+                "team": "MaloDaSeIgramo",
+                "players": [
+                    "fLuX",
+                    "entitay",
+                    "Spiljak",
+                    "Difrozen",
+                    "Macek"
+                ]
             }
         ],
         "lol": [
@@ -298,7 +308,8 @@
             "A. Plazl",
             "N. Šlehta",
             "A. Miklavžina",
-            "M. Jeseničnik"
+            "M. Jeseničnik",
+            "J. Kikec"
         ], 
         "rl": [
             "D. Škulj",
