@@ -1,5 +1,5 @@
 {
-	"lastChange": "06. 01. 2020, 13:11",
+	"lastChange": "08. 01. 2020",
     "teams": {
         "csgo": [
             {
@@ -265,7 +265,7 @@
                 ]
             }, 
             {
-                "team": "Ninja Želve",
+                "team": "?????",
                 "players": [
                     "LordMadMan",
                     "BlackDamb",
@@ -309,7 +309,9 @@
             "N. Šlehta",
             "A. Miklavžina",
             "M. Jeseničnik",
-            "J. Kikec"
+            "J. Kikec",
+            "L. Jezernik",
+            "M. Klajncar"
         ], 
         "rl": [
             "D. Škulj",
@@ -320,7 +322,8 @@
             "J. Petkovič",
             "A. Trbežnik",
             "M. Jeseničnik",
-            "A. Miklavžina"
+            "A. Miklavžina",
+            "M. Vasle"
         ]
     }
 }
