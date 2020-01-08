@@ -1,6 +1,14 @@
 {
     "posts": [
         {
+            "date": "9.1.2020",
+            "body": "<p>Spoštovani udeleženci,<br><br>obveščamo Vas, da bomo 2 dni pred začetkom turnirja (15. 1. 2020) zbirali potrditve za udeležbo dogodka. Potrditev je obvezna. <br><br>Lep pozdrav, Ekipa ŠCV Lan Party-a</p>"
+        }
+    ],
+    "posts_OLD": [
+
+
+        {
             "id": 4,
             "tags": [],
             "date": "31. 12. 2019",
