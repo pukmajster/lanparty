@@ -25,7 +25,7 @@ Templator.New({
     observe: 'body',
     render: props => {
         return (html`
-            <div INHERIT >
+            <div INHERIT  >
                 <div #pointer-events="none" .no-select #height="32px">
                     <img .crnr-tl src="./media/images/corner.png" />
                     <img .crnr-tr src="./media/images/corner.png" />
@@ -417,6 +417,12 @@ T('faqContainer', ({children}) => html`
 
 T('lpSponsor', ({children: name, image, url}) => html`
     <a href="${url}" target="blank"><img alt="${name}" src="${image}" /></a> 
+`)
+
+T('lpBracketTitle', ({children: title}) => html`
+    <div #INHERIT class="lpBracketTitle" #padding="5px" >
+        <a >${title}</a>
+    </div
 `)
 
 Templator.RenderInDomAll();

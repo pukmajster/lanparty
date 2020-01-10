@@ -358,3 +358,53 @@ div.lpPost {
     }
 }
 
+.lpBracketTitle {
+    background-color: rgb(38, 42, 50);
+    color: white;
+    text-align: center;
+
+    iframe ~ & {
+        margin-top: 2em;
+    }
+}
+
+iframe {
+    background-color: rgb(38, 42, 50);
+}
+
+.sponsors {
+    display: flex;
+    justify-content: space-between;;
+    
+    // background-color: rgb(0, 0, 0);
+    // flex-wrap: unset;
+    img {
+        // background-color: black;;
+        transform: scale(0.8);
+        display: block;
+
+    }
+}
+
+div[sponsors] {
+    visibility: hidden;
+
+    .content {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: $mqHeader) {
+    .sponsors  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;;
+    
+        a {
+            margin: -1em 0
+        }
+    }
+
+    
+}

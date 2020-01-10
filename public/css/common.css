@@ -66,7 +66,7 @@
 
 #header .header-nav-btn .header-nav-btn-content {
   display: inline-block;
-  margin: 0 2em;
+  margin: 0 1.5em;
   line-height: 5em;
 }
 
@@ -548,5 +548,63 @@ div.lpPost:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.lpBracketTitle {
+  background-color: #262a32;
+  color: white;
+  text-align: center;
+}
+
+iframe ~ .lpBracketTitle {
+  margin-top: 2em;
+}
+
+iframe {
+  background-color: #262a32;
+}
+
+.sponsors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sponsors img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  display: block;
+}
+
+div[sponsors] {
+  visibility: hidden;
+}
+
+div[sponsors] .content {
+  visibility: visible;
+}
+
+@media screen and (max-width: 900px) {
+  .sponsors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sponsors a {
+    margin: -1em 0;
   }
 }

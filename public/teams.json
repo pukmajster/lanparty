@@ -1,5 +1,5 @@
 {
-	"lastChange": "08. 01. 2020",
+	"lastChange": "10. 01. 2020",
     "teams": {
         "csgo": [
             {
@@ -103,16 +103,6 @@
                 ]
             },
             {
-                "team": "Cirilica",
-                "players": [
-                    "GLucky",
-                    "willy161",
-                    "Cverly",
-                    "Lil_Putin",
-                    "Katzusha_"
-                ]
-            },
-            {
                 "team": "FoxSide Gaming",
                 "players": [
                     "TaRiQ",
@@ -160,6 +150,16 @@
                     "Spiljak",
                     "Difrozen",
                     "Macek"
+                ]
+            },
+            {
+                "team": "SkunkCloud",
+                "players": [
+                    "M4ski",
+                    "Jayfour",
+                    "Nenich",
+                    "Kapien",
+                    "Al1"
                 ]
             }
         ],
@@ -311,7 +311,9 @@
             "M. Jeseničnik",
             "J. Kikec",
             "L. Jezernik",
-            "M. Klajncar"
+            "M. Klajncar",
+            "J. Sadikovic",
+            "P. R. Ježovnik"
         ], 
         "rl": [
             "D. Škulj",

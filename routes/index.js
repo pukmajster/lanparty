@@ -27,9 +27,9 @@ router.get('/faq', (req, res) => {
 });
 
 // Spored
-// router.get('/spored', (req, res) => {
-//     res.render('spored.njk');
-// });
+router.get('/razporedja', (req, res) => {
+    res.render('razporedja.njk');
+});
 
 // Test route
 router.get('/hi', (req, res) => {
