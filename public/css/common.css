@@ -360,6 +360,10 @@ div.lpButton2:hover:active {
           filter: saturate(0.8);
 }
 
+.disabled_btn {
+  background: gray !important;
+}
+
 div.lpPost {
   background-color: rgba(75, 75, 75, 0.089);
   -webkit-transition: background-color 0.1s ease-in-out;

@@ -154,6 +154,11 @@ div.lpButton2 {
     // background: linear-gradient(#e66465, #9198e5);
     text-align: center;
 
+    &[disabled] {
+
+    }
+
+
     > a {
         text-decoration: none;
         color: white;
@@ -169,6 +174,9 @@ div.lpButton2 {
     }
 }
 
+.disabled_btn {
+    background: gray !important;
+}
 
 div.lpPost {
     // height: 6em;

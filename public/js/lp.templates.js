@@ -79,8 +79,8 @@ Templator.New({
     render: props => {
         if (props.disabled != null) {
             return (html`
-                <a #font-size="19px" #text-decoration="none" #color="white" target="blank" >
-                    <div #cursor="default" #background="gray" INHERIT_NAME #margin="0 auto" #margin-top="5px " #overflow-x="">
+                <a #font-size="19px"  #background="gray" #text-decoration="none" #color="white" target="blank" >
+                    <div #cursor="default" .disabled_btn INHERIT_NAME #margin="0 auto" #margin-top="5px " #overflow-x="">
                         <span #background-color="gray" #max-width="80%"> ${props.children}</span>
                     </div>
                 </a>
