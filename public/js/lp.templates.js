@@ -21,6 +21,28 @@ Templator.New({
 })
 
 Templator.New({
+    name: 'lpNav_Brackets',
+    observe: '#header',
+    render: props => {
+        return (html`
+            <div .header-nav-btn ?id="${props._id}">
+                <a ?href="${props.link}">
+                    <div><div class="header-nav-btn-content" >${props.children}</div></div>
+                </a>
+                <div class="header-nav-btn-underline"></div>
+
+                <div  .header-nav-bracketlist>
+                    <a href="/razporedje/csgo" ><div>CS:GO</div></a>
+                    <a href="/razporedje/lol" ><div>LoL</div></a>
+                    <a href="/razporedje/fifa" ><div>FIFA 20</div></a>
+                    <a href="/razporedje/rl" ><div>Rocket Leauge</div></a>
+                </div>
+            </div>
+        `)
+    }
+})
+
+Templator.New({
     name: 'lpCornerBox',
     observe: 'body',
     render: props => {
@@ -202,6 +224,28 @@ Templator.New({
     }
 })
 
+const toggleBracketsPanel = () => {
+    let elem = document.getElementById('responsiveBracketsPanel');
+    if(elem) {
+        elem.toggleAttribute('open');
+    }
+}
+Templator.New({
+    name: 'lpResBracketsNav',
+    observe: 'body',
+    render: props => {
+        return html`
+            <a #user-select="none" onClick="toggleBracketsPanel()"><div  #padding="15px 0" #text-align="center" >${props.children}</div></a>
+            <div id="responsiveBracketsPanel" >
+                <a href="/razporedje/csgo" ><div>CS:GO</div></a>
+                <a href="/razporedje/lol" ><div>Leauge of Legends</div></a>
+                <a href="/razporedje/fifa" ><div>FIFA 20</div></a>
+                <a href="/razporedje/rl" ><div>Rocket Leauge</div></a>
+            </div
+        `
+    }
+})
+
 Templator.New({
     name: 'lpSocialsBar',
     observe: 'body',
@@ -239,7 +283,7 @@ Templator.New({
         return html`
             <a #margin="0 5px" INHERIT_NAME target="blank" href="${props.link}"  >
                 <img width="52" alt="${props.alt}" src="/media/images/s-${props.name}.png"> 
-            </a>
+            </div>
         `
     }
 })
@@ -422,6 +466,11 @@ T('lpSponsor', ({children: name, image, url}) => html`
 T('lpBracketTitle', ({children: title}) => html`
     <div #INHERIT class="lpBracketTitle" #padding="5px" >
         <a >${title}</a>
+    </div
+`)
+
+T('lpSporedSep', () => html`
+    <div #INHERIT class="lpSporedSep" #padding="1px 0 0 0" #max-height="1px" #background-color="black" #margin="1em 0" >
     </div
 `)
 

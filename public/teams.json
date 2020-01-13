@@ -1,5 +1,5 @@
 {
-	"lastChange": "10. 01. 2020",
+	"lastChange": "13. 01. 2020",
     "teams": {
         "csgo": [
             {
@@ -283,6 +283,16 @@
                     "Avocado bob",
                     "Magical pony 21"
                 ]
+            }, 
+            {
+                "team": "Šilcki",
+                "players": [
+                    "Xpert0S",
+                    "InTimer",
+                    "novak151",
+                    "Best Zorc NA",
+                    "Æs Joker"
+                ]
             }
         ]
     },
@@ -313,7 +323,8 @@
             "L. Jezernik",
             "M. Klajncar",
             "J. Sadikovic",
-            "P. R. Ježovnik"
+            "P. R. Ježovnik",
+            "E. Aletić"
         ], 
         "rl": [
             "D. Škulj",

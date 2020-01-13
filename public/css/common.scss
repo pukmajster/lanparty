@@ -416,3 +416,65 @@ div[sponsors] {
 
     
 }
+
+.header-nav-bracketlist {
+    // position: absolute;
+    background-color: $cHeaderBG;
+    // display: none;
+    box-shadow: $bxsHeader;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.1s ease-in-out;
+
+    a {
+        text-decoration: none;
+    }
+
+    div {
+        padding: 5px;
+
+        &:hover {
+            background-color: $cHeaderNavHover;
+        }
+
+        &:active {
+            background-color: $cHeaderNavPressure;
+        }
+    }
+ 
+    .header-nav-btn:hover & {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+#responsiveBracketsPanel {
+    max-height: 0px;
+    overflow: hidden;
+    text-align: center;
+
+
+    background-color: rgb(73, 73, 73);
+    user-select: none;
+    transition: max-height .2s ease-in-out;
+    
+
+    &[open] {
+        max-height: 400px;
+    }
+
+    div {
+        padding: 13px;
+        box-sizing: border-box;
+    }
+}
+
+.spored > div {
+    padding: 5px;
+}
+
+div[p] {
+    padding: 16px;
+}
