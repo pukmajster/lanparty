@@ -470,7 +470,7 @@ T('lpBracketTitle', ({children: title}) => html`
 `)
 
 T('lpSporedSep', () => html`
-    <div #INHERIT class="lpSporedSep" #padding="1px 0 0 0" #max-height="1px" #background-color="black" #margin="1em 0" >
+    <div #INHERIT class="lpSporedSep" #padding="1px 0 0 0" #max-height="1px" #background-color="black" #margin=".5em 0" >
     </div
 `)
 

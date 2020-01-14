@@ -104,6 +104,7 @@
 
 #headerSeperator {
   height: 6.6em;
+  height: 4.6em;
 }
 
 #responsiveHeader {
@@ -668,9 +669,9 @@ div[sponsors] .content {
 }
 
 .spored > div {
-  padding: 5px;
+  padding: 3px;
 }
 
 div[p] {
-  padding: 16px;
+  padding: 12px;
 }
