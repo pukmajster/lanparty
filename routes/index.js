@@ -46,7 +46,8 @@ let brackets = {
     },
     csgo: {
         game: 'Counter-Strike: Global Offensive',
-        bracket: 'https://challonge.com/erslanparty2020/module'
+        bracket: 'https://challonge.com/ypv8t1sn/module'
+        
     },
     rl: {
         game: 'Rocket League',
