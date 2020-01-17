@@ -20,10 +20,10 @@
         <div
             style=" display: flex; flex-direction: column; justify-content: center; text-align: center; font-size: 20px; max-width: 400px; margin: 0 auto">
             <div style="display: flex; flex-direction: column;  justify-content: center; align-content: center">
-                <p style="font-size: 23px; ">Prijaviš se lahko na naslednje igre:</p>
+                <p style="font-size: 23px; ">Prijave za naslednje igre so zdaj že zaprte.<br/></p>
                 <div style="margin-top: 10px; text-align: center">
-                    <lpButton2 link="https://docs.google.com/forms/d/e/1FAIpQLSe2b2KySSViYvqwmTm5cMs_pidQNVWoiydhYFfKqQWvtQQPaw/viewform">League of Legends</lpButton2>
-                    <lpButton2 link="https://docs.google.com/forms/d/e/1FAIpQLScQM3VbKOtTm6fBmczTnOQV2F-KHWEtegvCS9OzhKJlGocYUA/viewform">Fifa 20 (1v1)</lpButton2>
+                    <lpButton2 link="" disabled>League of Legends</lpButton2>
+                    <lpButton2 link="" disabled>Fifa 20 (1v1)</lpButton2>
                     <lpButton2 link="" disabled>Counter Strike: Global Offensive</lpButton2>
                     <lpButton2 link="" disabled >Rocket Leauge (1v1)</lpButton2>
                 </div>
@@ -67,10 +67,6 @@
     <lpPost title="{{ post.title | safe }}">{{ post.body | safe }}</lpPost>
     {% endif %}
     {% endfor %}
-
-    <!-- <lpPost :id="post1" title="TEST">AYY</lpPost>
-        <lpPost :id="post1" title="TEST">AYY</lpPost>
-        <lpPost :id="post1" title="TEST">AYY</lpPost> -->
 
     <div style="margin-top: 3em;"></div>
     <lpTitle>SPONZORJI</lpTitle>
